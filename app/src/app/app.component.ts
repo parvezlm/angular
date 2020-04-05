@@ -19,14 +19,14 @@ export class AppComponent {
   constructor(private dataservice: DataserviceService) { }
 
   ngOnInit() {
-    this.getData();
+    // this.getData();
   }
 
-  getData() {
-    this.dataservice.getEmployeeData().subscribe(data => {
-      debugger
-      this.dataSource = data.data;
-      console.log(this.dataSource);
-    })
-  }
+  // getData() {
+  //   this.dataservice.getEmployeeData().subscribe(data => {
+  //     debugger
+  //     this.dataSource = data.data;
+  //     console.log(this.dataSource);
+  //   })
+  // }
 }

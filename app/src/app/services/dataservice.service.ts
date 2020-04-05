@@ -11,4 +11,8 @@ export class DataserviceService {
   getEmployeeData() {
     return this.http.get<any>(`${this.baseUrl}`);
   }
+
+  getSportData() {
+    return this.http.get<any>('https://stats.nba.com/stats/boxscore');
+  }
 }
