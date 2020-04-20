@@ -1,0 +1,22 @@
+.main {
+    padding: 60px 0 50px;
+}
+
+.fruits_box {
+    background: #fff;
+    border:5px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+.fruits_box img {
+    display: block;
+    margin: 0 auto;
+    max-width: 180px;
+    min-height: 182px;
+    object-fit: contain;
+}
+
+.fruits_box h3 {
+    font-size: 20px;
+}

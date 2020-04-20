@@ -1,7 +1,27 @@
-<app-header></app-header>
-
 <section class="main">
     <div class="container">
-        <router-outlet></router-outlet>
+        <h3 class="mb-4">Fruits: {{ total_fruits }}</h3>
+        <div class="row">
+            <div class="col-md-4 mb-4" *ngFor='let fruit of fruits'>
+                <div class="fruits_box h-100 p-3">
+                    <img src="assets/img/apple.jpg" *ngIf='fruit.name == "Apple"' alt="image">
+                    <img src="assets/img/banana.jpg" *ngIf='fruit.name == "Banana"' alt="image">
+                    <img src="assets/img/grapes.jpg" *ngIf='fruit.name == "Grapes"' alt="image">
+                    <img src="assets/img/pinapple.jpg" *ngIf='fruit.name == "Pineapple"' alt="image">
+                    <img src="assets/img/orange.jpg" *ngIf='fruit.name == "Orange"' alt="image">
+                    <img src="assets/img/mango.jpg" *ngIf='fruit.name == "Mango"' alt="image">
+                    <h3>{{ fruit.name}}</h3>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h6><strong>Price: $</strong>{{ fruit.price }}</h6>
+                        <h6>
+                            <strong>Discount: </strong>
+                            <span [ngClass]="(fruit.price >= 30) ? 'badge-success': 'badge-warning'" class="badge">
+                                {{fruit.price >= 100 ? '10% ' : fruit.price >= 30 ? '5%' : 'NA' }}
+                            </span>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
