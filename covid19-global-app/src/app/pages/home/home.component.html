@@ -1,0 +1,38 @@
+<mat-card>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="heading_box">
+                <h4>Covid-19</h4>
+                <h3>Global</h3>
+            </div>
+        </div>
+        <div class="col-md-6 text-right">
+            <h3 class="time"><span>Last update : </span> {{ time | date}}</h3>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="confirm_box case_box">
+                <h4>Confirmed</h4>
+                <h2>{{ confirmed.value }}</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="recover_box case_box">
+                <h4>Recovered</h4>
+                <h2>{{ recovered.value }}</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="death_box case_box">
+                <h4>Deaths</h4>
+                <h2>{{ deaths.value }}</h2>
+            </div>
+        </div>
+    </div>
+</mat-card>
+
+<div class="text-center pt-5">
+    <button mat-raised-button color="warn" routerLink="/countries-status">View All</button>
+</div>

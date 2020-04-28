@@ -1,0 +1,9 @@
+<div class="product_box">
+    <div class="product_inner" *ngFor="let product of products; index as productId">
+        <h4><a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">{{product.name}}</a></h4>
+        <p *ngIf="product.description">{{ product.description }}</p>
+
+        <button (click)="share($event.target.name)" [name]="product.name"> Share</button>
+        <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+    </div>
+</div>

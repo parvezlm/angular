@@ -1,0 +1,30 @@
+.emp_box {
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 10px;
+
+    img {
+        max-height: 140px;
+    }
+
+    h4 {
+        font-size: 24px;
+        color: #000;
+        margin: 15px 0;
+    }
+
+    button {
+        background:#009688;
+        border:none;
+        color: #fff;
+        font-size: 16px;
+        padding: 5px 20px 2px;
+        outline:none;
+        border-radius: 4px;
+    }
+}
+
+.col-md-3 {
+    margin-bottom: 30px;
+}
