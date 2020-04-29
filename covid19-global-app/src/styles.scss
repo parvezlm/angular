@@ -57,3 +57,34 @@ table {
     box-shadow: none;
     table-layout: fixed;
 }
+
+.flag-icon:before {
+    font-size: 30px;
+}
+
+.flag-icon.flag-icon-squared {
+    width: 2.5em;
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+}
+
+.example-loading-shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 56px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .example-rate-limit-reached {
+    color: #980000;
+    max-width: 360px;
+    text-align: center;
+  }

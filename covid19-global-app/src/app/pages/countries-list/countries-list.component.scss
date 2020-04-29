@@ -1,0 +1,20 @@
+table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 70%;
+  }
+
+  .mat-card {
+    height: calc(100vh - 165px);
+    overflow: auto;
+    padding: 0 16px 16px!important;
+  }
+
+  button {
+      font-weight: normal;
+      outline: none;
+  }
