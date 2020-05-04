@@ -1,0 +1,20 @@
+.mat-card {
+    height: calc(100vh - 175px);
+    overflow: auto;
+    padding: 0 16px 16px!important;
+}
+
+  .mat-form-field {
+      width: 70%;
+  }
+
+  .mat-form-field input {
+      font-size: 16px;
+  }
+
+  button {
+      outline:none;
+  }
+  td.mat-cell:last-of-type {
+      padding-right: 0;
+  }

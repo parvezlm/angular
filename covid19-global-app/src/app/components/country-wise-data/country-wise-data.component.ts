@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryWiseDataService } from './../../services/country-wise-data/country-wise-data.service';
 import { ActivatedRoute } from '@angular/router';
-import {MatTableDataSource} from '@angular/material/table';
 
 
 @Component({
@@ -11,8 +10,13 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 
 export class CountryWiseDataComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'confirmed', 'recovered','deaths','lastUpdate'];
-  dataSource;
+  name;
+  countryCode;
+  confirmed;
+  recovered;
+  deaths;
+  lastUpdate;
+
 
   constructor(
     private countryWise: CountryWiseDataService,
@@ -27,13 +31,18 @@ export class CountryWiseDataComponent implements OnInit {
   getDataBycountry(name) {
     this.countryWise.getDataByCountry(name).subscribe((data:any) => {
       debugger
-      this.dataSource = new MatTableDataSource(data);
+      this.name = this.route.snapshot.params.name;
+      this.countryCode = this.route.snapshot.params['code'];
+      this.confirmed = data.confirmed;
+      this.recovered = data.recovered;
+      this.deaths = data.deaths;
+      this.lastUpdate = data.lastUpdate;
     })
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+  // applyFilter(event: Event) {
+  //   const filterValue = (event.target as HTMLInputElement).value;
+  //   this.dataSource.filter = filterValue.trim().toLowerCase();
+  // }
 
 }

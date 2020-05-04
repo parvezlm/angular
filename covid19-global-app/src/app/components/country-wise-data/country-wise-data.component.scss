@@ -1,7 +1,8 @@
 .mat-card {
-    height: calc(100vh - 165px);
+    height: calc(100vh - 175px);
     overflow: auto;
-    padding: 0 16px 16px!important;
+    padding:16px!important;
+    width: 100%;
 }
 
   .mat-form-field {
@@ -10,4 +11,21 @@
 
   .mat-form-field input {
       font-size: 16px;
+  }
+
+  table tr th {
+      font-size: 14px;
+      font-weight: 500;
+      color: #000;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 5px 0 15px;
+  }
+
+  table tr td {
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  button {
+      outline: none;
   }

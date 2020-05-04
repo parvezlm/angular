@@ -14,4 +14,5 @@ export class CountryWiseDataService {
     debugger
     return this.http.get(`${this.serverUrl}countries/${name}`);
   }
+
 }

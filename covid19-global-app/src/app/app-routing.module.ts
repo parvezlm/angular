@@ -1,3 +1,4 @@
+import { DailyTimeSummeryComponent } from './components/daily-time-summery/daily-time-summery.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'country-list', component:CountriesListComponent},
   { path: 'summery', component:SummeryComponent},
   { path: 'countries-status', component:CovidCaseStatusComponent},
-  { path: 'country-wise-data/:name', component:CountryWiseDataComponent},
+  { path: 'country-wise-data/:name/:code', component:CountryWiseDataComponent},
+  { path: 'date-wise-summery/:date',component:DailyTimeSummeryComponent},
   { path: '', redirectTo:'home', pathMatch:'full'}
 ];
 
