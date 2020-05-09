@@ -22,3 +22,9 @@ table {
   td.mat-cell {
       text-align: center;
   }
+
+  @media(max-width:414px) {
+    h2 {
+      margin: 0;
+    }
+  }

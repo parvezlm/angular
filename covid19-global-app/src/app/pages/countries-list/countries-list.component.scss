@@ -18,3 +18,10 @@ table {
       font-weight: normal;
       outline: none;
   }
+
+  
+  @media(max-width:414px) {
+    h2 {
+      margin: 0;
+    }
+  }

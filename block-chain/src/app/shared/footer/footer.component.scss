@@ -1,0 +1,14 @@
+$footer_bg:#174d7c;
+$primary_txt_color:#ffffff;
+
+
+.footer {
+    background-color: $footer_bg;
+    padding: 41px 0;
+
+    p {
+        color:$primary_txt_color;
+        font-weight: 300;
+        font-size: 18px;
+    }
+}

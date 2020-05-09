@@ -33,6 +33,7 @@ body {
     background-color: #f1f1f1;
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
+    padding-top: 66px;
 }
 .main {
     padding:20px 50px 20px;
@@ -92,3 +93,36 @@ table {
   button {
       outline:none;
   }
+
+//   media
+
+
+@media(max-width:991px) {
+    .main {
+        padding: 20px 15px 20px;
+    }
+}
+
+@media(max-width:991px) {
+    .main {
+        padding: 20px 0 20px;
+    }
+
+    table {
+        width: 1300px!important;
+    }
+}
+
+@media(max-width:767px) {
+    
+    .col-md-6.text-right {
+        text-align: left!important;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:414px) {
+    .mat-form-field {
+        width: 100%!important;
+    }
+}

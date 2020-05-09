@@ -31,7 +31,6 @@ export class CovidCaseStatusComponent implements OnInit {
   getCovidData() {
     this.covidCase.getCountriesData().subscribe((data:any) => {
       debugger
-      console.log(data);
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
       this.isLoadingResults = false;

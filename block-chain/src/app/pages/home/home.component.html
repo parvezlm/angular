@@ -1,0 +1,93 @@
+<section class="banner">
+    <div class="wraper">
+        <div class="inner">
+            <h1>lorem <span>ipsum</span></h1>
+            <img src="assets/img/backgrounds/large_bicoin_icon.png" alt="bit coin">
+        </div>
+    </div>
+    <div class="btm_icon_bx">
+        <img src="assets/img/icons/bitcoin_icon.png" alt="icon">
+    </div>
+</section>
+
+<section class="services">
+    <div class="wraper">
+        <h2 class="common_heading text-center">OUR SERVICES</h2>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="service_box h-100 text-center">
+                    <img src="assets/img/icons/contract.png" alt="icon">
+                    <h4>SMART CONTRACTS <br>DEVELOPMENT</h4>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service_box h-100 text-center">
+                    <img src="assets/img/icons/exchange.png" alt="icon">
+                    <h4>EXCHANGES</h4>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service_box h-100 text-center">
+                    <img src="assets/img/icons/block_devlp.png" alt="icon">
+                    <h4>BLOCKCHAIN <br>DEVELOPMENT</h4>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 margin_top">
+                <div class="service_box h-100 text-center">
+                    <img src="assets/img/icons/hyperleader.png" alt="icon">
+                    <h4>HYPERLEDGER</h4>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 margin_top">
+                <div class="service_box h-100 text-center">
+                    <img src="assets/img/icons/private_blockchain.png" alt="icon">
+                    <h4>PRIVATE BLOCKCHAIN <br>DEVELOPMENT</h4>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 margin_top">
+                <div class="service_box h-100 text-center">
+                    <img src="assets/img/icons/wallet.png" alt="icon">
+                    <h4>WALLET</h4>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn_primary">View All Services</button>
+        </div>
+    </div>
+</section>
+
+<section class="trends">
+    <div class="wraper">
+        <div class="inner text-center">
+            <h2 class="common_heading">Trends</h2>
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                    <h4>{{slide.content1}} <br> {{slide.content2}} <br> {{slide.content3}}</h4>
+                    <div class="slide_img_box">
+                        <img src="{{ slide.img }}" alt="" width="100%">
+                        <button type="button" class="btn_primary viewAll_btn">View All</button>
+                    </div>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="wraper">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>New to the Blockchain industry?<br>
+                    Or got any queries? <br>
+                    We are just one click away!
+                </h4>
+            </div>
+            <div class="col-md-6">
+                <div class="form_wraper h-100">
+                    <form action=""></form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

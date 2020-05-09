@@ -28,7 +28,6 @@ export class CountriesListComponent implements OnInit {
   getCountryListData() {
     this.countryList.getCountryList().subscribe((data:any) => {
       debugger;
-      console.log(data);
       this.dataSource = new MatTableDataSource(data.countries);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;

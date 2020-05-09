@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit {
   getData() {
     this.homeservice.getData().subscribe((data:any) => {
       debugger
-      console.log(data);
       this.confirmed = data.confirmed;
       this.recovered = data.recovered;
       this.deaths = data.deaths;

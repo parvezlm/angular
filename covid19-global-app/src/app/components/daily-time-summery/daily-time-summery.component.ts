@@ -31,7 +31,6 @@ export class DailyTimeSummeryComponent implements OnInit {
   getDataByDate(date) {
     this.dailySummry.getDataByDate(date).subscribe((data:any) => {
       debugger
-      console.log(data);
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
       this.dateValue = date;
