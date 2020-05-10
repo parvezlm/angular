@@ -1,18 +1,33 @@
-<header>
+<header class="header">
     <nav>
         <a routerLink="/home">
             <img src="assets/img/logo.png" alt="logo">
         </a>
-        <ul class="ml-auto">
-            <li><a routerLink="home" routerLinkActive="active">Home</a></li>
-            <li><a routerLink="">portfolio</a></li>
-            <li><a routerLink="">Technologies</a></li>
-            <li><a routerLink="">Marketing Insight</a></li>
-            <li><a routerLink="">Services</a></li>
-            <li><a routerLink=""> About us</a></li>
-          
-        </ul>
+        <div class="sidebar ml-auto">
+            <ul class="">
+                <li><a routerLink="home" routerLinkActive="active">Home</a></li>
+                <li><a routerLink="">portfolio</a></li>
+                <li><a routerLink="">Technologies</a></li>
+                <li><a routerLink="">Marketing Insight</a></li>
+                <li class="dropdown">
+                    <a routerLink="" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Smart Contracts Development</a>
+                        <a class="dropdown-item" href="#">Exchanges</a>
+                        <a class="dropdown-item" href="#">Blockchain Development</a>
+                        <a class="dropdown-item" href="#">Hyperledger</a>
+                        <a class="dropdown-item" href="#">Private Blockchain Development</a>
+                        <a class="dropdown-item" href="#">Wallet</a>
+                    </div>
+                </li>
+                <li><a routerLink=""> About us</a></li>
+    
+            </ul>
+        </div>
+        <button type="button" class="toggle_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
-</header>  
-
-                                 
+</header>
