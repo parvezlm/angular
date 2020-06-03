@@ -5,20 +5,23 @@
         <div class="col-md-6">
             <div class="parent_left h-100 user_type_box">
                 <h4>User name</h4>
-                 <ul>
-                     <li class="d-flex justify-content-between" *ngFor="let user of users">{{user}} <span>Remove</span></li>
-                 </ul>
+                <ul>
+                    <li class="d-flex justify-content-between" *ngFor="let user of users;let i = index">{{user}} <span
+                            (click)="removeUser(i)">Remove</span></li>
+                </ul>
             </div>
         </div>
         <div class="col-md-6">
             <div class="parent_rht h-100 user_type_box">
                 <h4>Admin name</h4>
                 <ul>
-                    <li class="d-flex justify-content-between" *ngFor="let admin of admins">{{admin}} <span>Remove</span></li>
+                    <li class="d-flex justify-content-between" *ngFor="let admin of admins;let i = index">{{admin}}
+                        <span (click)="removeAdmin(i)">Remove</span></li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
 
-<app-child (usersValue)="getUser($event)" (adminsValue)="getAdmin($event)" [total_users]="users_total" [total_admins]="admins_total"></app-child>
+<app-child (usersValue)="getUser($event)" (adminsValue)="getAdmin($event)" [total_users]="users_total"
+    [total_admins]="admins_total"></app-child>

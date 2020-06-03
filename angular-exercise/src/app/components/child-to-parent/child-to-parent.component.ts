@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child-to-parent.component.scss']
 })
 export class ChildToParentComponent implements OnInit {
-  users = [];
-  admins = [];
+  users = ["John"];
+  admins = ["Smith"];
   users_total;
   admins_total;
 
@@ -23,6 +23,16 @@ export class ChildToParentComponent implements OnInit {
 
   getAdmin(adata) {
     this.admins.push(adata);
+    this.admins_total = this.admins.length;
+  }
+
+  removeUser(i) {
+    this.users.splice(i,1);
+    this.users_total = this.users.length;
+  }
+
+  removeAdmin(i) {
+    this.admins.splice(i,1);
     this.admins_total = this.admins.length;
   }
 }
