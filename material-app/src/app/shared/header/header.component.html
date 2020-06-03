@@ -1,0 +1,16 @@
+<header>
+    <div class="container">
+        <nav class="navbar navbar-light">
+            <a class="logo">Logo</a>
+            <ul class="navbar-nav menu" *ngIf="isLoggedIn">
+                <li><a routerLink="home">Home</a></li>
+                <li><a routerLink="">About</a></li>
+                <li><a routerLink="">Contact</a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto right_menu">
+                <li class="ml-auto" *ngIf="isLoggedIn"><a routerLink="login">Login</a></li>
+                <li *ngIf="pathAdmin == '/admin'" (click)="logoutuser()" class="logout_btn"><a>Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

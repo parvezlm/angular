@@ -1,0 +1,17 @@
+<div class="login_box d-flex align-items-center">
+    <div class="form_wraper">
+        <form #loginForm="ngForm" (ngSubmit)="checkLogin(loginForm.value)">
+            <mat-form-field >
+                <mat-label>User Name</mat-label>
+                <input matInput name="uname" ngModel required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide ? 'password': 'text'" name="psw" ngModel required>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+            <span>{{msg}}</span>
+        </form>
+    </div>
+</div>

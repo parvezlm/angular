@@ -1,0 +1,35 @@
+.mat-form-field {
+    width: 100%;
+}
+
+.login_box {
+    height: calc(70vh - 20px);
+.form_wraper {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    padding:80px 55px;
+    border-radius: 4px;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+
+    button {
+        width: 150px;
+        height: 40px;
+        margin: 20px auto 0;
+        display: block;
+        outline: none;
+     }
+
+     .mat-raised-button.mat-primary {
+         background-color: #009688;
+     }
+
+     span {
+        text-align: center;
+        display: block;
+        margin-top: 20px;
+        color:#ff0000;
+     }
+   
+    }
+}

@@ -1,0 +1,43 @@
+.course_box {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    border-radius: 0 0 4px 4px;
+
+    img {
+        width: 100%;
+    }
+
+    .course_btm {
+        padding: 0 15px 25px;
+    
+    p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right:5px;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 15px 0 10px;
+    }
+
+    h5 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        }
+
+        button {
+            margin: 0 auto;
+            display: block;
+            margin-top: 20px;
+            outline:none;
+            border: none;
+            font-size: 14px;
+            padding: 7px 15px;
+            cursor: pointer;
+        }
+    }
+}

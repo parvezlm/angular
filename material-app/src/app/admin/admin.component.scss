@@ -1,0 +1,36 @@
+.form_wraper {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+
+
+    .mat-form-field {
+        display: block;
+        .mat-form-field-infix {
+            width: 100%;
+        }
+    } 
+
+    textarea {
+        resize: none;
+        height: 20px;
+    }
+
+    button {
+        outline: none;
+        margin-top: 30px;
+        width: 180px;
+    }
+
+    .error {
+        color: #ff0000;
+        font-size: 12px;
+    }
+
+    .col-md-6 {
+        padding: 0 30px;
+    }
+}

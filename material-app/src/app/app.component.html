@@ -1,0 +1,6 @@
+<app-header></app-header>
+<section class="main" [ngClass]="(urlname == '/login') ? 'bgcolor':(urlname ==  '/admin')? 'admin_bgcolor': ''">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</section>

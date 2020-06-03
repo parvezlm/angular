@@ -1,0 +1,56 @@
+<div class="form_wraper">
+    <form [formGroup]="courseDetails" (ngSubmit)="onsubmit(courseDetails.value)">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field>
+                    <mat-label>ID</mat-label> 
+                     <input matInput formControlName="id">
+                 </mat-form-field>
+                 <div *ngIf="courseId.errors?.pattern" class="error">Only number allowed</div>
+         
+                 <mat-form-field>
+                     <mat-label>Course Name</mat-label>
+                     <input matInput formControlName="coursename" minlength="3" maxlength="50">
+                 </mat-form-field>
+                 <div *ngIf="courseName.errors?.minlength" class="error">Minimum 3 characters allowed</div>
+                 <div *ngIf="courseName.errors?.maxlength" class="error">Maximum 50 characters allowed</div>
+         
+         
+                 <mat-form-field>
+                     <mat-label>Price</mat-label>
+                     <input matInput formControlName="price">
+                 </mat-form-field>
+                 <div *ngIf="price.errors?.pattern" class="error">Numeric value allowed</div>  
+         
+                 <mat-form-field>
+                     <mat-label>Url</mat-label>
+                     <input matInput formControlName="imageurl">
+                 </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field>
+                    <mat-label>Requirements 1</mat-label>
+                    <input matInput formControlName="requires1">
+                </mat-form-field>
+        
+                <mat-form-field>
+                    <mat-label>Requirements 2</mat-label>
+                    <input matInput formControlName="requires2">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Requirements 3</mat-label>
+                    <input matInput formControlName="requires3">
+                </mat-form-field>
+        
+                <mat-form-field>
+                    <mat-label>Descriptions</mat-label>
+                    <textarea matInput formControlName="desc" minlength="30" maxlength="300"></textarea>
+                    <div *ngIf="courseDesc.errors?.minlength" class="error">Minimum 30 characters allowed</div>
+                    <div *ngIf="courseDesc.errors?.maxlength" class="error">Maximum 300 characters allowed</div>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <button mat-raised-button color="primary" [disabled]="!courseDetails.valid">Submit</button>
+    </form>
+</div>
