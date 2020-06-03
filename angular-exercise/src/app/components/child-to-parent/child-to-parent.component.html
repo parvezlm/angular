@@ -1,0 +1,24 @@
+<div class="wraper mb-5">
+    <h2>Child to parent</h2>
+    <h3>Parent</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="parent_left h-100 user_type_box">
+                <h4>User name</h4>
+                 <ul>
+                     <li class="d-flex justify-content-between" *ngFor="let user of users">{{user}} <span>Remove</span></li>
+                 </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="parent_rht h-100 user_type_box">
+                <h4>Admin name</h4>
+                <ul>
+                    <li class="d-flex justify-content-between" *ngFor="let admin of admins">{{admin}} <span>Remove</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-child (usersValue)="getUser($event)" (adminsValue)="getAdmin($event)" [total_users]="users_total" [total_admins]="admins_total"></app-child>

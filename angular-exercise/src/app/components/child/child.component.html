@@ -1,0 +1,23 @@
+<div class="wraper">
+    <h3>Child</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="parent_left h-100 user_type_box">
+                <input type="text" class="form-control" placeholder="Create user" #user>
+                <span class="error"></span>
+                <button type="button" class="create_btn" (click)="addUsers(user)">Create</button>
+
+                <h5 *ngIf="total_users">Total users: {{total_users}}</h5>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="parent_rht h-100 user_type_box">
+                <input type="text" class="form-control" placeholder="Create user" #admin>
+                <span class="error2"></span>
+                <button type="button" class="create_btn" (click)="addAdmins(admin)">Create</button>
+
+                <h5 *ngIf="total_admins">Total admin: {{total_admins}}</h5>
+            </div>
+        </div>
+    </div>
+</div>

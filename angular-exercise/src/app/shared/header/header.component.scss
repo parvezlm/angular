@@ -1,0 +1,52 @@
+$primary_text_color: #444;
+$white_bg_color:#fff;
+$menu_hover_color:#c0ca33;
+
+.header {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 13px 0;
+    background-color: $white_bg_color;
+
+    nav {
+        padding-left: 0;
+        ul {
+            padding: 0;
+            li {
+                a {
+                    font-size: 18px;
+                    color: $primary_text_color;
+                    text-decoration: none;
+                    position: relative;
+                    transition: all 0.2s ease-in-out;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: -3px;
+                        left: 0;
+                        width:0;
+                        height: 2px;
+                        background: $menu_hover_color;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    &:hover {
+                        color:$menu_hover_color;
+                    }
+
+                    &:hover:after {
+                        width: 100%;
+                    }
+
+                }
+            }
+
+            li +  li {
+                padding-left: 30px;
+            }
+        }
+    }
+}
