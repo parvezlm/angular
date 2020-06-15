@@ -15,12 +15,13 @@ export class CourseDetailsComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.getSingleData(this.route.snapshot.params['id']);
+    this.getSinglecourse(this.route.snapshot.params['id']);
   }
 
-  getSingleData(id) {
-    this.courseservice.getSingleData(id).subscribe(data => {
-      console.log(data);
+  getSinglecourse(id) {
+    this.courseservice.getSingleCourse(id).subscribe(data => {
+      debugger
+       console.log(data);
     })
   }
 }

@@ -17,9 +17,9 @@ export class AuthGuardService {
     }
   }
 
-  logedIn() {
-    return !!localStorage.getItem('username');
-  }
+  // logedIn() {
+  //   return !!localStorage.getItem('username');
+  // }
 
   logoutuser() {
     localStorage.removeItem('username');
