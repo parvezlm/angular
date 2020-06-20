@@ -1,0 +1,186 @@
+<header class="header">
+    <div class="header_top fullwidht_header1 padding_lft">
+        <nav class="navbar d_flex">
+            <div class="navbar_left">
+                <ul class="menu">
+                    <li><a class="active" (click)="showDropdowPages($event)">Pages</a>
+                        <ul class="dropdown_menu" *ngIf="dropdown">
+                            <li><a routerLink="account"><i class="fas fa-briefcase"></i>My Account</a></li>
+                            <li><a routerLink="task-manager"><i class="fas fa-tasks"></i>Task Manager <span class="bedge">2</span></a></li>
+                            <li><a routerLink=""><i class="fas fa-users"></i>Team Manager <span class="fas fa-angle-right"></span></a></li>
+                            <li><a routerLink=""><i class="far fa-hdd"></i>Project Manager <span class="fas fa-angle-right"></span></a></li>
+                            <li><a routerLink=""><i class="fas fa-file"></i> Create New Project </a></li>
+                        </ul>
+                    </li>
+                    <li><a (click)="showDropdowFeatures($event)">Features</a>
+                        <div class="mega_menu d_flex" *ngIf="featuresDropdown">
+                            <div class="mega_menu_col">
+                                <h4>Task Report</h4>
+                                <ul>
+                                    <li><a routerLink=""><i class="fas fa-tasks"></i> Latest Task</a></li>
+                                    <li><a routerLink=""><i class="fas fa-sync"></i> Pending Task</a></li>
+                                    <li><a routerLink=""><i class="fas fa-hourglass-half"></i> Urgent Task</a></li>
+                                    <li><a routerLink=""><i class="fas fa-thumbtack"></i> Complete Task</a></li>
+                                    <li><a routerLink=""><i class="fas fa-window-close"></i> Failed Task</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega_menu_col">
+                                <h4>Profit Margins</h4>
+                                <ul>
+                                    <li><a href=""><span></span> Overall Profits</a></li>
+                                    <li><a href=""><span></span> Gross Profits</a></li>
+                                    <li><a href=""><span></span> Net Profits</a></li>
+                                    <li><a href=""><span></span> Year to Date Reports</a></li>
+                                    <li><a href=""><span></span> Quarterly Reports</a></li>
+                                    <li><a href=""><span></span> Monthly Profits</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega_menu_col">
+                                <h4>Staff Management</h4>
+                                <ul>
+                                    <li><a href="">Latest Task</a></li>
+                                    <li><a href="">Pending Task</a></li>
+                                    <li><a href="">Urgent Task</a></li>
+                                    <li><a href=""> Complete Task</a></li>
+                                    <li><a href="">Failed Task</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega_menu_col">
+                                <h4>Tools</h4>
+                                <ul>
+                                    <li><a href=""><i class="fas fa-tasks"></i> Latest Task</a></li>
+                                    <li><a href=""><i class="fas fa-sync"></i> Pending Task</a></li>
+                                    <li><a href=""><i class="fas fa-hourglass-half"></i> Urgent Task</a></li>
+                                    <li><a href=""><i class="fas fa-thumbtack"></i> Complete Task</a></li>
+                                    <li><a href=""><i class="fas fa-window-close"></i> Failed Task</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a (click)="showDropdowApps($event)">Apps</a>
+                        <ul class="dropdown_menu" *ngIf="appsDropdown">
+                            <li><a href=""><i class="fas fa-briefcase"></i>Reporting</a></li>
+                            <li><a href=""><i class="fas fa-users"></i>Social Presence <span class="fas fa-angle-right"></span></a></li>
+                            <li><a href=""><i class="fas fa-file"></i> Sales & Marketing </a></li>
+                            <li><a href=""><i class="fas fa-tasks"></i>Campaigns <span class="bedge">2</span></a></li>
+                            <li><a href=""><i class="far fa-hdd"></i>Deployement Center <span class="fas fa-angle-right"></span></a></li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar_right d_flex">
+                <button type="button" class="view_more_btn"><i class="material-icons">more_vert</i></button>
+                <ul class="controls_menu">
+                    <li><a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect x="0" y="0" width="24" height="24"></rect>
+                                <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#6eb5f8" fill-rule="nonzero" opacity="0.3"></path>
+                                <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#3699ff" fill-rule="nonzero"></path>
+                            </g>
+                        </svg>
+                    </a></li>
+
+                    <li>
+                        <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect x="0" y="0" width="24" height="24"></rect>
+                                <path d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z" fill="#6eb5f8" opacity="0.3"></path>
+                                <path d="M8.56066017,16.6819805 L10.6819805,14.5606602 C11.267767,13.9748737 12.2175144,13.9748737 12.8033009,14.5606602 L14.9246212,16.6819805 C15.5104076,17.267767 15.5104076,18.2175144 14.9246212,18.8033009 L12.8033009,20.9246212 C12.2175144,21.5104076 11.267767,21.5104076 10.6819805,20.9246212 L8.56066017,18.8033009 C7.97487373,18.2175144 7.97487373,17.267767 8.56066017,16.6819805 Z M8.56066017,4.68198052 L10.6819805,2.56066017 C11.267767,1.97487373 12.2175144,1.97487373 12.8033009,2.56066017 L14.9246212,4.68198052 C15.5104076,5.26776695 15.5104076,6.21751442 14.9246212,6.80330086 L12.8033009,8.9246212 C12.2175144,9.51040764 11.267767,9.51040764 10.6819805,8.9246212 L8.56066017,6.80330086 C7.97487373,6.21751442 7.97487373,5.26776695 8.56066017,4.68198052 Z" fill="#3699ff"></path>
+                            </g>
+                        </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24"></rect>
+                                    <rect fill="#6eb5f8" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5"></rect>
+                                    <rect fill="#3699ff" x="8" y="9" width="3" height="11" rx="1.5"></rect>
+                                    <rect fill="#3699ff" x="18" y="11" width="3" height="9" rx="1.5"></rect>
+                                    <rect fill="#3699ff" x="3" y="13" width="3" height="7" rx="1.5"></rect>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24"></rect>
+                                    <path d="M12,4.56204994 L7.76822128,9.6401844 C7.4146572,10.0644613 6.7840925,10.1217854 6.3598156,9.76822128 C5.9355387,9.4146572 5.87821464,8.7840925 6.23177872,8.3598156 L11.2317787,2.3598156 C11.6315738,1.88006147 12.3684262,1.88006147 12.7682213,2.3598156 L17.7682213,8.3598156 C18.1217854,8.7840925 18.0644613,9.4146572 17.6401844,9.76822128 C17.2159075,10.1217854 16.5853428,10.0644613 16.2317787,9.6401844 L12,4.56204994 Z" fill="#6eb5f8" fill-rule="nonzero" opacity="0.3"></path>
+                                    <path d="M3.5,9 L20.5,9 C21.0522847,9 21.5,9.44771525 21.5,10 C21.5,10.132026 21.4738562,10.2627452 21.4230769,10.3846154 L17.7692308,19.1538462 C17.3034221,20.271787 16.2111026,21 15,21 L9,21 C7.78889745,21 6.6965779,20.271787 6.23076923,19.1538462 L2.57692308,10.3846154 C2.36450587,9.87481408 2.60558331,9.28934029 3.11538462,9.07692308 C3.23725479,9.02614384 3.36797398,9 3.5,9 Z M12,17 C13.1045695,17 14,16.1045695 14,15 C14,13.8954305 13.1045695,13 12,13 C10.8954305,13 10,13.8954305 10,15 C10,16.1045695 10.8954305,17 12,17 Z" fill="#3699ff"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24"></rect>
+                                    <rect fill="#3699ff" x="4" y="4" width="7" height="7" rx="1.5"></rect>
+                                    <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#6eb5f8" opacity="0.3"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24"></rect>
+                                    <path d="M16,15.6315789 L16,12 C16,10.3431458 14.6568542,9 13,9 L6.16183229,9 L6.16183229,5.52631579 C6.16183229,4.13107011 7.29290239,3 8.68814808,3 L20.4776218,3 C21.8728674,3 23.0039375,4.13107011 23.0039375,5.52631579 L23.0039375,13.1052632 L23.0206157,17.786793 C23.0215995,18.0629336 22.7985408,18.2875874 22.5224001,18.2885711 C22.3891754,18.2890457 22.2612702,18.2363324 22.1670655,18.1421277 L19.6565168,15.6315789 L16,15.6315789 Z" fill="#3699ff"></path>
+                                    <path d="M1.98505595,18 L1.98505595,13 C1.98505595,11.8954305 2.88048645,11 3.98505595,11 L11.9850559,11 C13.0896254,11 13.9850559,11.8954305 13.9850559,13 L13.9850559,18 C13.9850559,19.1045695 13.0896254,20 11.9850559,20 L4.10078614,20 L2.85693427,21.1905292 C2.65744295,21.3814685 2.34093638,21.3745358 2.14999706,21.1750444 C2.06092565,21.0819836 2.01120804,20.958136 2.01120804,20.8293182 L2.01120804,18.32426 C1.99400175,18.2187196 1.98505595,18.1104045 1.98505595,18 Z M6.5,14 C6.22385763,14 6,14.2238576 6,14.5 C6,14.7761424 6.22385763,15 6.5,15 L11.5,15 C11.7761424,15 12,14.7761424 12,14.5 C12,14.2238576 11.7761424,14 11.5,14 L6.5,14 Z M9.5,16 C9.22385763,16 9,16.2238576 9,16.5 C9,16.7761424 9.22385763,17 9.5,17 L11.5,17 C11.7761424,17 12,16.7761424 12,16.5 C12,16.2238576 11.7761424,16 11.5,16 L9.5,16 Z" fill="#6eb5f8" opacity="0.3"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="user_dp d_flex">
+                    <p>Hi, <strong>{{user_name}}</strong></p>
+                    <span><img src="/assets/img/dp.png" alt="user profile"></span>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="header_btm fullwidht_header2 d_flex align_itmes_center padding_lft">
+        <div class="headerBtm_left">
+            <div class="d_flex align_itmes_center">
+                <h3>{{page_title}}</h3>
+                <div class="total_users d_flex align_itmes_center">
+                   <h5>50 Totals</h5> 
+                   <input type="text" placeholder="Search..">
+                    <button type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect x="0" y="0" width="24" height="24"></rect>
+                                <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#b1b1b1" fill-rule="nonzero" opacity="0.3"></path>
+                                <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#c4c5d0" fill-rule="nonzero"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="headerBtm_right d_flex align_itmes_center">
+            <button type="button">Add user</button>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                        <path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#87e1dc" fill-rule="nonzero" opacity="0.3"></path>
+                        <path d="M11,14 L9,14 C8.44771525,14 8,13.5522847 8,13 C8,12.4477153 8.44771525,12 9,12 L11,12 L11,10 C11,9.44771525 11.4477153,9 12,9 C12.5522847,9 13,9.44771525 13,10 L13,12 L15,12 C15.5522847,12 16,12.4477153 16,13 C16,13.5522847 15.5522847,14 15,14 L13,14 L13,16 C13,16.5522847 12.5522847,17 12,17 C11.4477153,17 11,16.5522847 11,16 L11,14 Z" fill="#1bc5bd"></path>
+                    </g>
+                </svg>
+            </span>
+        </div>
+    </div>
+</header>

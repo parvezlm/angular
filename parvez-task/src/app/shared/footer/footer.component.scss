@@ -1,0 +1,43 @@
+footer {
+    background-color: #fff;
+    padding: 20px 25px 20px 88px;
+    
+    
+    .footer_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.25s ease-in-out;
+    
+
+    ul {
+       li {
+           display: inline-block;
+           padding: 0 8px;
+
+           a {
+               font-size: 16px;
+               color: #6b6d7c;
+           }
+       }     
+
+        }
+
+        p {
+            font-size: 16px;
+            color:#6b6d7c;
+        }
+    }
+}
+
+.padding_lft {
+    padding-left: 203px;
+}
+
+// media
+
+@media(max-width:1199px) {
+     .padding_lft {
+         padding-left: 0;
+     }
+}

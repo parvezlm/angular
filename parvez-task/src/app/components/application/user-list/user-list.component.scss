@@ -1,0 +1,272 @@
+$text_color:#b8b8b9;
+.user_manage_box {
+    padding: 25px 28px;
+    background-color: #fff;
+    max-width: 1094px;
+    margin: 0 auto;
+    border-radius: 4px;
+
+    .inner {
+        .userManage_top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .user_manage_lft {
+            h2 {
+                font-size: 20px;
+                font-weight: 500;
+                color:#000;
+                margin-bottom: 6px;
+            }
+
+            p {
+                font-size: 16px;
+                color: $text_color;
+            }
+        }
+
+        .user_manage_rht {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            button {
+                display: flex;
+                align-items: center;
+                border:none;
+                font-weight: 600;
+                border-radius: 6px;
+                padding:0 12px;
+                height: 40px;
+                outline: none;
+                font-size: 14px;
+
+            }
+
+            .export_box {
+                position: relative;
+                button {
+                    margin-right: 8px;
+                    background-color: #e1f0ff;
+                    color: #3699ff;
+                    
+                    i {
+                        margin-left: 10px;
+                    }
+
+                    svg {
+                        margin-right: 10px;
+                    }
+                }
+
+                .dropdown_content {
+                    position: absolute;
+                    top: 44px;
+                    left: 0;
+                    background-color: #fff;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                    width: 100%;
+                    padding: 15px 0;
+                    border-radius: 4px;
+
+                    li {
+                        display: block;
+                        padding: 5px 15px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #3699ff;
+                            color: #fff;
+                        }
+                    }
+                }
+
+            }
+
+            button.new_records {
+                background-color: #3699ff;
+                border:none;
+                color: #fff;
+            }
+        }
+
+        .table_box {
+            padding-top: 20px;
+            table {
+                width: 100%;
+
+                th {
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    color: $text_color;
+                }
+
+                td {
+                    color: #464e5f;
+                    font-weight: 500;
+                    span {
+                        display: block;
+                        color: #b5b7c7;
+                        margin-top: 3px;
+                        font-weight: normal;
+                    }
+
+                    img {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 6px;
+                        float: left;
+                        margin-right: 15px;
+                    }
+
+                    p {
+                        color: #3699ff;
+                    }
+
+                    button {
+                        background-color:#deebf9;
+                        border:none;
+                        padding: 5px 5px 2px;
+                        border-radius: 6px;
+                        outline: none;
+                        cursor: pointer;
+
+                        &:nth-child(2) {
+                            margin: 0 8px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .paginator {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .paginator_lft {
+            display: flex;
+            align-items: center;
+           ;
+         button {
+             background-color: #ecf1f6;
+             width: 30px;
+             height: 30px;
+             padding: 5px;
+             border-radius: 6px;
+             color:$text_color;
+             outline: none;
+             border:none;
+             cursor: pointer;
+
+             
+             &:nth-child(1) {
+                 margin-right: 10px;
+             }
+
+             &:nth-child(5) {
+                 margin-left: 10px;
+             }
+         }
+
+         ul {
+             li {
+                 display: inline-block;
+                 margin: 0 10px;
+                 color: #464e5f;
+             }
+            li.active {
+                background-color: #3699ff;
+                width: 30px;
+                height: 30px;
+                padding: 5px;
+                border-radius: 6px;
+                color: #fff;
+            }
+         }
+        }
+
+        .paginator_rht {
+            display: flex;
+            align-items: center;
+            select {
+                background-color: #ecf1f6;
+                border:none;
+                outline: none;
+                height: 27px;
+                width: 60px;
+                border-radius: 6px;
+                padding: 5px;
+                color: #464e5f;
+            }
+             p {
+                color: #464e5f;
+                margin-left: 15px;
+             }
+        }
+    }
+}
+
+
+
+// media
+@media (max-width:1259px) {
+
+    .user_manage_box {
+        .inner {
+            .table_box {
+                overflow-x: auto;
+             table {
+                 width: 1000px;
+                 }
+             }
+
+        }
+    }
+   
+} 
+
+@media(max-width:767px) {
+    .user_manage_box .inner .userManage_top,
+    .user_manage_box .paginator {
+        display: block;
+        
+    }
+
+    .user_manage_box .inner .user_manage_rht {
+        margin-top: 22px;
+    }
+
+    .user_manage_box .paginator .paginator_lft,
+    .user_manage_box .paginator .paginator_rht {
+        justify-content: center;
+    }
+
+    .user_manage_box .paginator .paginator_rht {
+        margin-top: 20px;
+    }
+
+    .user_manage_box .inner .user_manage_rht button {
+        font-size: 12px;
+    }
+
+}
+
+@media(max-width:414px) {
+    .user_manage_box .inner .user_manage_lft p {
+        font-size: 14px;
+    }
+
+    .user_manage_box .paginator .paginator_rht p {
+        margin-left: 8px;
+    }
+
+    .user_manage_box .paginator .paginator_lft ul li {
+        margin: 0 4px;
+    }
+
+}
