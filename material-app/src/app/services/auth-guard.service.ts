@@ -17,10 +17,6 @@ export class AuthGuardService {
     }
   }
 
-  // logedIn() {
-  //   return !!localStorage.getItem('username');
-  // }
-
   logoutuser() {
     localStorage.removeItem('username');
     this.router.navigate(['/login']);

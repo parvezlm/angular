@@ -1,0 +1,18 @@
+<div class="sidebar" [ngClass]="commonTask.hideSideNav?'collapse_sidebar':'sidebar'">
+    <div class="logo_box">
+        <h3>Company Logo</h3>
+        <button type="button" (click)="commonTask.toggleSideNav()">
+            <i class="material-icons" *ngIf="!commonTask.hideSideNav">arrow_back</i>
+            <i class="material-icons" *ngIf="commonTask.hideSideNav">arrow_forward</i>
+        </button>
+    </div>
+    <div class="sidebar_menus">
+        <ul>
+            <li routerLinkActive="active" *ngFor="let pathname of routesName">
+                <a routerLink="{{pathname.path}}">
+                    <span class="material-icons">{{pathname.icon}}</span><p>{{pathname.path}}</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
