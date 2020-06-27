@@ -1,0 +1,9 @@
+<section class="wraper" [ngClass]="commonservice.hideNavBar?'margin_left':''">
+  <div class="sidebar_box">
+    <app-sidebar></app-sidebar>
+  </div>
+  <app-header></app-header>
+  <div class="main-panel">
+    <router-outlet></router-outlet>
+  </div>
+</section>

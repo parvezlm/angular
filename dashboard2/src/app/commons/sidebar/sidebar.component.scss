@@ -1,0 +1,93 @@
+$primary_color:#bbbbbb;
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 265px;
+    background-color: #455a64;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease-in-out;
+    overflow: hidden;
+
+    .sidebarTop {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 20px;
+
+        h2 {
+            color:$primary_color;
+            font-size: 20px;
+            white-space: nowrap;
+            display: block;
+            transition: all 0.25s ease-in-out;
+        }
+
+        button {
+            background-color: transparent;
+            color:$primary_color;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    .sidebar_menu_box {
+        padding-top: 50px;
+        ul {
+            li {
+                margin-bottom: 15px;
+                a {
+                    color:$primary_color;
+                    font-size: 16px;
+                    padding: 10px 20px;
+                    text-transform: capitalize;
+                    display: block;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    transition: all 0.25s linear;
+
+                    p {
+                        transition: all 0.2s linear;
+                        opacity: 1;
+                    }
+
+                    span {
+                        margin-right: 15px;
+                    }
+
+                    &:hover {
+                        background-color: $primary_color;
+                        color: #455a64;
+                    }
+                }
+            }
+        }
+    }
+}
+
+li.active a {
+    background-color: $primary_color;
+    color: #455a64!important;
+}
+
+.collapse {
+    width: 70px;
+     .sidebarTop {
+         h2 {
+             display: none;
+         }
+     }
+
+     .sidebar_menu_box {
+        ul {
+            li {
+                a  p{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

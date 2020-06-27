@@ -1,0 +1,50 @@
+$transition:all 0.2s ease-in-out;
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+
+    .inner {
+        padding: 21px 15px;
+        transition: $transition;
+        box-shadow: 0  2px 5px rgba(0,0,0,0.2);
+        background-color: #fff;
+        margin-left: 70px;
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .nav_lft {
+                h2 {
+                    font-size: 24px;
+                    color: #444;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.col-30 {
+    flex:0 0 30%;
+    max-width: 30%;
+}
+
+.col-70 {
+    flex: 0 0 70%;
+    max-width:70%;
+}
+
+.col-30,
+.col-70 {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
