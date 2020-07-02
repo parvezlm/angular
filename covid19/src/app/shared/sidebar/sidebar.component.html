@@ -1,0 +1,19 @@
+<div class="sidebar" [ngClass]="!commonTask.hideSideBar?'collapse':''">
+    <div class="sidebar_top">
+        <h2>Covid-19</h2>
+        <button type="button" (click)="toggle()">
+            <i class="material-icons" *ngIf="commonTask.hideSideBar">arrow_back</i>
+            <i class="material-icons" *ngIf="!commonTask.hideSideBar">arrow_forward</i>
+        </button>
+    </div>
+    <div class="sidebar_menu">
+        <ul>
+            <li routerLinkActive="active" *ngFor="let routes of approutes">
+                <a routerLink="{{routes.path}}">
+                    <i class="material-icons">{{routes.icon}}</i>
+                    <span>{{(routes.pathname)}}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

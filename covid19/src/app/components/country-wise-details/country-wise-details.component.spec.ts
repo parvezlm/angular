@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidebarComponent } from './sidebar.component';
+import { CountryWiseDetailsComponent } from './country-wise-details.component';
 
-describe('SidebarComponent', () => {
-  let component: SidebarComponent;
-  let fixture: ComponentFixture<SidebarComponent>;
+describe('CountryWiseDetailsComponent', () => {
+  let component: CountryWiseDetailsComponent;
+  let fixture: ComponentFixture<CountryWiseDetailsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidebarComponent ]
+      declarations: [ CountryWiseDetailsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidebarComponent);
+    fixture = TestBed.createComponent(CountryWiseDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

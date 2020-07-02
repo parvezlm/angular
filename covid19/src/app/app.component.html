@@ -1,0 +1,11 @@
+<section class="wraper" [ngClass]="commonTask.hideSideBar?'margin_left':''">
+  <div class="sidebar_box">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="header_box">
+    <app-header></app-header>
+  </div>
+  <div class="main-panel">
+    <router-outlet></router-outlet>
+  </div>
+</section>

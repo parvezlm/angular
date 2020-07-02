@@ -16,7 +16,6 @@ export class SidebarComponent implements OnInit {
      {path:'about',icon:'local_offer'},
      {path:'application',icon:'apps'},
      {path:'contact',icon:'contacts'},
-     {path:'profile',icon:'account_circle'},
      {path:'projects',icon:'layers'},
    ];
 

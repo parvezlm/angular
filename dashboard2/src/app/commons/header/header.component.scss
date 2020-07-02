@@ -28,6 +28,19 @@ header {
                     font-weight: 500;
                 }
             }
+
+            .nav_rht {
+                button {
+                    background-color:#455a64;
+                    border:none;
+                    color: #bbb;
+                    padding: 7px 18px;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    outline:none;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
