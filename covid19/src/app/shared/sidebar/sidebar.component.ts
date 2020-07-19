@@ -11,7 +11,8 @@ declare let $:any;
 export class SidebarComponent implements OnInit {
   approutes = [
     { path:'dashboard', icon:'dashboard', pathname:'dashboard'},
-    { path:'countries-list', icon:'public', pathname:'countries list'},
+    { path:'countries', icon:'public', pathname:'countries'},
+    { path:'countries-list', icon:'grain', pathname:'countries list'},
     { path:'summery', icon:'content_paste',pathname:'summery' }
   ];
 

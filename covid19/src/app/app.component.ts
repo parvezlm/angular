@@ -20,7 +20,6 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.getTitle();
-    console.log(this.router.events);
   }
 
 

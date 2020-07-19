@@ -1,0 +1,206 @@
+$main_heading_color: #333333;
+
+.dashboard_top {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin: 0 -15px;
+
+   .status_col {
+      padding: 0px 15px;
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      box-sizing: border-box;
+   }
+
+   .cases_number {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      color: #fff;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+
+      h2 {
+         font-size: 32px;
+      }
+
+      h3 {
+         font-size: 54px;
+         margin-top: 10px;
+      }
+   }
+
+   .confirmed_box {
+      background: #fc4a1a;
+      background: -webkit-linear-gradient(45deg, #fc4a1a, #f7b733) !important;
+      background: linear-gradient(45deg, #fc4a1a, #f7b733) !important;
+   }
+
+   .recovered_box {
+      background: #00b09b;
+      background: -webkit-linear-gradient(45deg, #00b09b, #96c93d) !important;
+      background: linear-gradient(45deg, #00b09b, #96c93d) !important;
+   }
+
+   .deaths_box {
+      background: #ee0979;
+      background: -webkit-linear-gradient(45deg, #ee0979, #ff6a00) !important;
+      background: linear-gradient(45deg, #ee0979, #ff6a00) !important;
+   }
+
+   .last_update {
+      padding: 25px 0 0 15px;
+      color: #757575;
+   }
+}
+
+.dashboard_btm {
+   .global_data {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+
+      .global_col {
+         flex: 0 0 50%;
+         max-width: 50%;
+         padding: 0 15px;
+         box-sizing: border-box;
+      }
+
+      h2 {
+         color: $main_heading_color;
+         font-size: 24px;
+         font-weight: 500;
+
+         span {
+            font-weight: normal;
+            font-size: 20px;
+         }
+      }
+
+      .country_section {
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+         padding: 20px;
+         border-radius: 6px;
+         box-sizing: border-box;
+         background-color: #fff;
+
+         .graph {
+            canvas {
+               width: 100%;
+            }
+         }
+      }
+   }
+
+   .totalcases {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 15px;
+      position: relative;
+
+      .allcases_box {
+         position: absolute;
+         top: -210px;
+         right: -97px;
+         background-color: #fff;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+         border-radius: 4px;
+         padding: 20px 15px;
+         width: 190px;
+         z-index: 9;
+
+         h3 {
+            color: #6d6b6b;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 5px;
+            font-size: 16px;
+         }
+
+         &:before,
+         &:after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+         }
+
+         &:before {
+            border-top: 15px solid #fff;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid transparent;
+            z-index: 2;
+         }
+
+         &:after {
+            border-top: 15px solid rgba(0, 0, 0, 0.2);
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid transparent;
+            bottom: -31px;
+         }
+
+         ul {
+            list-style: none;
+            li {
+               padding: 10px 10px 10px 20px;
+               position: relative;
+               &:before {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 7px;
+                  width: 7px;
+                  height: 70%;
+               }
+
+               &:nth-child(1):before {
+                  background-color: #fc4a1a;
+               }
+
+               &:nth-child(2):before {
+                  background-color: #00b09b;
+               }
+
+               &:nth-child(3):before {
+                  background-color: #ee0979;
+               }
+            }
+         }
+      }
+
+      .allcases_box2 {
+         right: -7px;
+         &:before,
+         &:after {
+            left: 88%;
+         }
+      }
+
+      button {
+         background-color: #fff;
+         border: none;
+         cursor: pointer !important;
+         color: $main_heading_color;
+         outline: none;
+      }
+   }
+}
+
+// utility
+hr {
+   margin: 25px auto 30px;
+   width: 100%;
+}
+
+.h-100 {
+   height: 100% !important;
+}

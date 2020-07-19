@@ -32,6 +32,7 @@ export class HeaderComponent implements OnInit {
         if(child.snapshot.data['title']) {
           return child.snapshot.data['title'];
         }
+        
       })
       ).subscribe(title => {
         this.heading = title;

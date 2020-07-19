@@ -1,1 +1,81 @@
-<p>dashboard works!</p>
+<div class="container">
+    <div class="dashboard_top" *ngFor="let case of covid_case">
+
+        <div class="status_col">
+            <div class="confirmed_box cases_number h-100">
+                <h2>Confirmed</h2>
+                <h3>{{case.confirmed}}</h3>
+            </div>
+        </div>
+
+        <div class="status_col">
+            <div class="recovered_box cases_number h-100">
+                <h2>Recovered</h2>
+                <h3>{{case.recovered}}</h3>
+            </div>
+        </div>
+
+        <div class="status_col">
+            <div class="deaths_box cases_number h-100">
+                <h2>Deaths</h2>
+                <h3>{{case.deaths}}</h3>
+            </div>
+        </div>
+      <span class="last_update"><strong>Last Update : </strong>{{case.lastupdate | date:'medium'}}</span>
+    </div>
+    <hr>
+    <div class="dashboard_btm">
+        <div class="global_data">
+            <div class="global_col">
+                <div class="india_section country_section h-100">
+                    <div class="totalcases" *ngFor="let case of covid_case">
+                        <h2>India's : <span>10 effected states</span></h2>
+                        <button type="button" class="material-icons" (click)="toggleIndia()">
+                            <span *ngIf="!isdisplay">more_vert</span>
+                            <span *ngIf="isdisplay">clear</span>
+                        </button>
+                        <div class="allcases_box" *ngIf="isdisplay">
+                            <h3>India total cases:</h3>
+                            <ul *ngFor="let indiacase of indian_total_case">
+                                <li>{{indiacase.confirmed}}</li>
+                                <li>{{indiacase.recovered}}</li>
+                                <li>{{indiacase.deaths}}</li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="graph">
+                        <canvas #barchart id="india_chart" width="" height="200" style="width:100%!important;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="global_col">
+                <div class="global_section country_section h-100">
+                    <div class="totalcases">
+                        <h2>Global's :  <span>10 effected cites / countries</span></h2>
+                        <button type="button" class="material-icons" (click)="toggleGlobe()">
+                            <span *ngIf="!isdisplay_g">more_vert</span>
+                            <span *ngIf="isdisplay_g">clear</span>
+                        </button> 
+                        <div class="allcases_box allcases_box2" *ngIf="isdisplay_g">
+                            <h3>Global total case :</h3>
+                            <ul *ngFor="let cases of covid_case">
+                                <li>{{cases.confirmed}}</li>
+                                <li>{{cases.recovered}}</li>
+                                <li>{{cases.deaths}}</li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="graph">
+                        <canvas #barchart id="global_chart" width="" height="200" style="width:100%!important;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- loader -->
+<div class="loader_wraper" *ngIf="isloades">
+    <div class="loader"></div>
+</div>

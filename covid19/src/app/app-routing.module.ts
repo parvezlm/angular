@@ -6,13 +6,16 @@ import { SummeryComponent } from './components/summery/summery.component';
 import { CountryWiseDetailsComponent } from './components/country-wise-details/country-wise-details.component';
 import { CountryComponent } from './components/country/country.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CountriesListComponent } from './components/countries-list/countries-list.component';
+
 
 
 
 const appRoutes: Routes = [
   { path:'dashboard', component:DashboardComponent, data: {title:'Dashboard'} },
-  { path:'countries-list', component:CountryComponent, data: {title:'Countries List'} },
-  { path:'country-wide-details', component:CountryWiseDetailsComponent, data: {title:'Country Details'} },
+  { path:'countries', component:CountryComponent, data: {title:'Countries'} },
+  { path:'countries-list', component:CountriesListComponent, data: {title:'Countries List'}},
+  { path:'country-wise-details/:name/:code', component:CountryWiseDetailsComponent, data: {title:'Country Details'} },
   { path:'summery', component:SummeryComponent, data: {title:'Summery'} },
   { path:'', redirectTo:'dashboard', pathMatch:'full'}
 ]
