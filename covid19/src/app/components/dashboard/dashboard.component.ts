@@ -40,7 +40,7 @@ export class DashboardComponent implements OnInit {
     this.dashboardservice.getIndiaState().subscribe((res:any) => {
       debugger
 
-      this.india_state_case = res.filter(state_data => state_data.confirmed > 25000);
+      this.india_state_case = res.filter(state_data => state_data.confirmed > 90000);
       this.state_name = this.india_state_case.map(state_name => state_name.provinceState);
       this.confirmed = this.india_state_case.map(conf_case=> conf_case.confirmed);
       this.recovered = this.india_state_case.map(recover_case => recover_case.recovered);
@@ -85,12 +85,12 @@ export class DashboardComponent implements OnInit {
     // global
     this.dashboardservice.getCountries().subscribe((res:any) => {
       debugger
-       this.countries = res.filter(countries => countries.confirmed > 210000);
+       this.countries = res.filter(countries => countries.confirmed > 280000);
        this.global_cities_name = this.countries.map(cites => cites.combinedKey);
        this.global_confirmed = this.countries.map(confirm => confirm.confirmed);
        this.global_recovered = this.countries.map(recover => recover.recovered);
        this.global_deaths = this.countries.map(deaths => deaths.deaths);
-
+       
 
       // global graph
 

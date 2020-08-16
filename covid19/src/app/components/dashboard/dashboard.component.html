@@ -29,7 +29,7 @@
             <div class="global_col">
                 <div class="india_section country_section h-100">
                     <div class="totalcases" *ngFor="let case of covid_case">
-                        <h2>India's : <span>10 effected states</span></h2>
+                        <h2>India's : <span>Most effected states</span></h2>
                         <button type="button" class="material-icons" (click)="toggleIndia()">
                             <span *ngIf="!isdisplay">more_vert</span>
                             <span *ngIf="isdisplay">clear</span>
@@ -51,7 +51,7 @@
             <div class="global_col">
                 <div class="global_section country_section h-100">
                     <div class="totalcases">
-                        <h2>Global's :  <span>10 effected cites / countries</span></h2>
+                        <h2>Global's :  <span>Most effected cites / countries</span></h2>
                         <button type="button" class="material-icons" (click)="toggleGlobe()">
                             <span *ngIf="!isdisplay_g">more_vert</span>
                             <span *ngIf="isdisplay_g">clear</span>
