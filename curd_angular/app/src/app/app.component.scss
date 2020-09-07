@@ -1,0 +1,36 @@
+.main {
+    padding:60px 0;
+
+    .employee_box {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+
+        h3 {
+            font-size:18px;
+        }
+    }
+
+    .add_btn {
+        background-color: #009688;
+        border:none;
+        padding:10px 25px;
+        color:#fff;
+        border-radius:4px;
+        outline:none;
+    }
+
+    .upper_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}
+
+
+p,ul,h1,h2,h3,h4,h5,h6 {
+    margin:0;
+}
