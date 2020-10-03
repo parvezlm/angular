@@ -1,0 +1,35 @@
+.login {
+    min-height: calc(100vh - 125px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login_form_wraper {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        width: 460px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 40px 40px;
+        border-radius: 6px;
+
+        label {
+            columns: #1c1c1c;
+            
+        }
+
+        button {
+            background-color: #f0a500;
+            border: none;
+            color: #fff;
+            padding: 10px 40px 8px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+    }
+
+    .error {
+        color:#ff0000;
+        display: block;
+        text-align: center;
+    }
+}

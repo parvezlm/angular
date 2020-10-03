@@ -1,0 +1,10 @@
+<div class="sidebar" [ngClass]="commomTask.sidebarCollpase?'collpase':''">
+    <ul>
+        <li routerLinkActive="active" *ngFor="let sidebarlink of sidebarlinks">
+            <a routerLink="{{sidebarlink.path}}">
+                <i class="material-icons">{{sidebarlink.icon_name}}</i>
+                <span>{{sidebarlink.path_name}}</span>
+            </a>
+        </li>
+    </ul>
+</div>

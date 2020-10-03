@@ -1,0 +1,16 @@
+<header>
+    <nav class="nav">
+        <div class="navbar_left d-flex align-items-center">
+            <span class="material-icons mr-2" (click)="toggle()" *ngIf="notoggle">dehaze</span>
+            <span class="material-icons mr-2" [routerLink]="'/'" *ngIf="!notoggle">keyboard_backspace</span>
+            <div class="navbar-brand">
+                <a [routerLink]="'/'">Logo</a>
+            </div>
+        </div>
+        <div class="navbar_right d-flex align-items-center justify-content-between">
+            <h2>{{heading}}</h2>
+            <button class="" [routerLink]="'/login'" *ngIf="hidelogin">Login</button>
+            <button [routerLink]="'/login'" *ngIf="hidelogout" (click)="logout()">Logout</button>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,9 @@
+<section>
+  <app-header></app-header>
+   <div class="sidebar_wraper" *ngIf="nosidebar">
+    <app-sidebar></app-sidebar>
+   </div>
+  <div class="root" [ngClass]="!commonTask.sidebarCollpase?'margin_left':''" [ngStyle]="{'margin-left':!nosidebar ? '0' :'', 'background-color':!nosidebar ? '#f0a500' : ''}">
+    <router-outlet></router-outlet>
+  </div>
+</section>
